@@ -1,30 +1,193 @@
-<!-- SECTION 2 -->
-<div class="section">
-  <h2>Complete Your Activation</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exford Global Training Access</title>
 
-  <p>Enter your name to send the message automatically:</p>
-  <input type="text" id="username" placeholder="Your Name" style="padding:10px; width:80%; margin-bottom:10px; border-radius:5px; border:none;">
+<!-- Google Fonts for premium look -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
-  <a href="#" id="whatsappBtn" class="btn whatsapp">
-    👉 Click here to message on WhatsApp
-  </a>
+<style>
+  /* GLOBAL STYLES */
+  * {
+    box-sizing: border-box;
+  }
 
-  <ul style="margin-top:15px;">
-    <li>Save this number: <strong>0707 587 8693</strong></li>
-    <li>The message will be automatically pre-filled:</li>
-    <li><strong>"Registration Complete + Your Name"</strong></li>
-    <li>Attach your registration card</li>
-  </ul>
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 700px;
+    background: #121212;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: #00ff88;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-top: 30px;
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #c9d1d9;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 16px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    background: #00ff88;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: #00cc6a;
+  }
+
+  .whatsapp {
+    background: #25D366;
+    color: #fff;
+  }
+
+  .whatsapp:hover {
+    background: #1ebe57;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .warning {
+    margin-top: 40px;
+    padding: 20px;
+    background: #1f1f1f;
+    border-left: 6px solid #ff4d4d;
+    font-size: 15px;
+    color: #ff7b72;
+    border-radius: 8px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    padding: 12px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ff88;
+  }
+
+  /* Responsive */
+  @media(max-width: 480px) {
+    h1 { font-size: 26px; }
+    h2 { font-size: 20px; }
+    .btn { width: 100%; text-align: center; }
+    input[type="text"] { width: 100%; }
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <h1>Payment Successful ✅</h1>
+  <p><strong>Welcome to Exford Global Training Access</strong></p>
+  <p>You’re one step away from joining the training group. Access your <strong>Registration Card</strong> below 👇</p>
+
+  <!-- SECTION 1: Registration Card -->
+  <div class="section">
+    <h2>Your Registration Card</h2>
+    <p>Click below to view/download your card:</p>
+    <a href="https://raw.githubusercontent.com/exfordglobal/Exford-Global-Registration/main/CS%20PDF%202026-04-01%2014.07.36.pdf" class="btn" target="_blank">
+      👉 Download Registration Card
+    </a>
+  </div>
+
+  <!-- SECTION 2: WhatsApp Activation -->
+  <div class="section">
+    <h2>Complete Your Activation</h2>
+    <p>Enter your name to send a pre-filled WhatsApp message:</p>
+    <input type="text" id="username" placeholder="Your Name">
+
+    <a href="#" id="whatsappBtn" class="btn whatsapp">
+      👉 Message on WhatsApp
+    </a>
+
+    <ul>
+      <li>Save this number: <strong>0707 587 8693</strong></li>
+      <li>The message will be automatically pre-filled:</li>
+      <li><strong>"Registration Complete + Your Name"</strong></li>
+      <li>Attach your registration card</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 3: Next Steps -->
+  <div class="section">
+    <h2>What Happens Next</h2>
+    <ul>
+      <li>You will be added to the official training group</li>
+      <li>Get updates on available professional courses</li>
+      <li>Receive guidance on how to begin your training</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 4: Urgency -->
+  <div class="warning">
+    ⚠️ Important: Access is only granted after verification. Do not delay — activate immediately to avoid missing updates.
+  </div>
+
 </div>
 
 <script>
+  // WhatsApp Dynamic Link
   const btn = document.getElementById('whatsappBtn');
   const input = document.getElementById('username');
 
   btn.addEventListener('click', () => {
-    const name = encodeURIComponent(input.value.trim() || ''); 
+    const name = encodeURIComponent(input.value.trim() || '');
     const message = encodeURIComponent(`Registration Complete ${name}`);
     const url = `https://wa.me/2347075878693?text=${message}`;
     window.open(url, '_blank');
   });
 </script>
+
+</body>
+</html>
