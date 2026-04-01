@@ -1,72 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Complete Registration</title>
+<!-- SECTION 2 -->
+<div class="section">
+  <h2>Complete Your Activation</h2>
 
-<style>
-body {
-  font-family: Arial;
-  background: #0d1117;
-  color: white;
-  text-align: center;
-}
-.container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-}
-input {
-  width: 90%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: none;
-}
-button {
-  padding: 14px 20px;
-  background: #00ff88;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-</style>
-</head>
+  <p>Enter your name to send the message automatically:</p>
+  <input type="text" id="username" placeholder="Your Name" style="padding:10px; width:80%; margin-bottom:10px; border-radius:5px; border:none;">
 
-<body>
+  <a href="#" id="whatsappBtn" class="btn whatsapp">
+    👉 Click here to message on WhatsApp
+  </a>
 
-<div class="container">
-
-<h2>Payment Successful ✅</h2>
-<p>Complete your registration to access the training group</p>
-
-<input type="text" id="name" placeholder="Full Name">
-<input type="text" id="phone" placeholder="Phone Number">
-<input type="text" id="email" placeholder="Email (optional)">
-
-<br>
-
-<button onclick="sendToWhatsApp()">Submit & Continue</button>
-
+  <ul style="margin-top:15px;">
+    <li>Save this number: <strong>0707 587 8693</strong></li>
+    <li>The message will be automatically pre-filled:</li>
+    <li><strong>"Registration Complete + Your Name"</strong></li>
+    <li>Attach your registration card</li>
+  </ul>
 </div>
 
 <script>
-function sendToWhatsApp() {
-  var name = document.getElementById("name").value;
-  var phone = document.getElementById("phone").value;
-  var email = document.getElementById("email").value;
+  const btn = document.getElementById('whatsappBtn');
+  const input = document.getElementById('username');
 
-  var message = "New Registration:%0A"
-              + "Name: " + name + "%0A"
-              + "Phone: " + phone + "%0A"
-              + "Email: " + email;
-
-  var url = "https://wa.me/2349060241087?text=" + message;
-
-  window.open(url, "_blank");
-}
+  btn.addEventListener('click', () => {
+    const name = encodeURIComponent(input.value.trim() || ''); 
+    const message = encodeURIComponent(`Registration Complete ${name}`);
+    const url = `https://wa.me/2347075878693?text=${message}`;
+    window.open(url, '_blank');
+  });
 </script>
-
-</body>
-</html>
